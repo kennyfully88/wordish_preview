@@ -1,0 +1,1 @@
+enum AppViews { main, splash }
