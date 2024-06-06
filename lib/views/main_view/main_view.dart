@@ -6,7 +6,7 @@ import 'package:wordish/components/question_meter/question_meter.dart';
 import 'package:wordish/components/question_picture/question_picture.dart';
 import 'package:wordish/components/reset_button/reset_button.dart';
 import 'package:wordish/providers/app_logic.dart';
-// import 'package:wordish/providers/images_set.dart';
+import 'package:wordish/providers/images_set.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -16,7 +16,7 @@ class MainView extends StatelessWidget {
     bool appInit = context.watch<AppLogic>().appInit;
 
     if (!appInit) {
-      // context.read<AppLogic>().setQuestion(context.watch<ImagesSet>());
+      context.read<AppLogic>().setQuestion(context.watch<ImagesSet>());
       context.read<AppLogic>().initApp();
     }
 

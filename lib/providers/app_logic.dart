@@ -59,7 +59,7 @@ class AppLogic extends ChangeNotifier {
       _currentAnswerChoices[0] = imagesStringsBuffer[answer2Rng];
     }
 
-    notifyListeners();
+    if (_appInit) notifyListeners();
   }
 
   void checkAnswer(int answerChoice, ImagesSet imagesSet) {
